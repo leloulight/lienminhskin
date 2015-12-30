@@ -32,13 +32,13 @@
 @section('head_js')
 <script type='text/javascript' src='http://d.theme20.com/sevenmag/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
 <script type='text/javascript' src='{{ asset('js/migrate.js') }}'></script>
-<script src="{{ asset('js/seven.min.js') }}"></script>
-<script src="{{ asset('js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('js/jquery.li-scroller.1.0.js') }}"></script>
-<script src="{{ asset('js/jquery.fitvids.js') }}"></script>
-<script src="{{ asset('plugins/prettyphoto/js/jquery.prettyPhoto.js') }}"></script>
-<script src="{{ asset('js/custom.js') }}"></script>
-<script src="{{ asset('js/skin.js') }}"></script>
+<script type='text/javascript' src="{{ asset('js/seven.min.js') }}"></script>
+<script type='text/javascript' src="{{ asset('js/owl.carousel.min.js') }}"></script>
+<script type='text/javascript' src="{{ asset('js/jquery.li-scroller.1.0.js') }}"></script>
+<script type='text/javascript' src="{{ asset('js/jquery.fitvids.js') }}"></script>
+<script type='text/javascript' src="{{ asset('plugins/prettyphoto/js/jquery.prettyPhoto.js') }}"></script>
+<script type='text/javascript' src="{{ asset('js/custom.js') }}"></script>
+<script type='text/javascript' src="{{ asset('js/skin.js') }}"></script>
 @parent
 @stop
 @section('head_js')
