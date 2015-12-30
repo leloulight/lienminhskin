@@ -30,7 +30,7 @@
 @section('afterBody')
 @show
 @section('head_js')
-<script type='text/javascript' src='http://d.theme20.com/sevenmag/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+    <script type='text/javascript' src='{{ asset('js/jquery.js') }}'></script>
 <script type='text/javascript' src='{{ asset('js/migrate.js') }}'></script>
 <script type='text/javascript' src="{{ asset('js/seven.min.js') }}"></script>
 <script type='text/javascript' src="{{ asset('js/owl.carousel.min.js') }}"></script>
