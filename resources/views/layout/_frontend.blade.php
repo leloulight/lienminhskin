@@ -1,5 +1,3 @@
-@section('author_header')
-@show
 <!DOCTYPE html>
 <html>
 <head>
@@ -74,5 +72,3 @@
 @show
 </body>
 </html>
-@section('hacker_footer')
-@show
