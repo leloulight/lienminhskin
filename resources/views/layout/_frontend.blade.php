@@ -38,6 +38,7 @@
 <script src="{{ asset('js/jquery.fitvids.js') }}"></script>
 <script src="{{ asset('plugins/prettyphoto/js/jquery.prettyPhoto.js') }}"></script>
 <script src="{{ asset('js/custom.js') }}"></script>
+<script src="{{ asset('js/skin.js') }}"></script>
 @parent
 @stop
 @section('head_js')
