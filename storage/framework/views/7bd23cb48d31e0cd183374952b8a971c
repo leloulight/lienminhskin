@@ -1,0 +1,78 @@
+<?php $__env->startSection('author_header'); ?>
+<?php echo $__env->yieldSection(); ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><?php $__env->startSection('title'); ?> <?php echo $__env->yieldSection(); ?></title>
+    <meta name="description" content="<?php echo e(isset($description) ? $description : 'Blog'); ?>"/>
+    <meta name="keywords" content="<?php echo e(Cache::get('website_keywords')); ?>"/>
+    <meta name="author" content="<?php echo e(Cache::get('system_author_website')); ?>"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <link rel="shortcut icon" href="<?php echo e(asset('favicon.ico')); ?>" type="image/x-icon">
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>"/>
+    <link href="<?php echo e(asset('css/style.css')); ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('css/icons.css')); ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('css/animate.css')); ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('css/responsive.css')); ?>" rel="stylesheet" type="text/css"/>
+
+    <?php $__env->startSection('beforeStyle'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('head_style'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('afterStyle'); ?>
+    <?php echo $__env->yieldSection(); ?>
+</head>
+<body <?php $__env->startSection('body_attr'); ?>class=""<?php echo $__env->yieldSection(); ?>>
+<?php $__env->startSection('beforeBody'); ?>
+<?php echo $__env->yieldSection(); ?>
+<?php $__env->startSection('body'); ?>
+<?php echo $__env->yieldSection(); ?>
+<?php $__env->startSection('afterBody'); ?>
+<?php echo $__env->yieldSection(); ?>
+<?php $__env->startSection('head_js'); ?>
+<script type='text/javascript' src='http://d.theme20.com/sevenmag/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
+<script type='text/javascript' src='http://d.theme20.com/sevenmag/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script src="<?php echo e(asset('js/seven.min.js')); ?>"></script>
+<script src="<?php echo e(asset('js/owl.carousel.min.js')); ?>"></script>
+<script src="<?php echo e(asset('js/jquery.li-scroller.1.0.js')); ?>"></script>
+<script src="<?php echo e(asset('js/jquery.fitvids.js')); ?>"></script>
+<script src="<?php echo e(asset('plugins/prettyphoto/js/jquery.prettyPhoto.js')); ?>"></script>
+<script src="<?php echo e(asset('js/custom.js')); ?>"></script>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    jQuery(document).ready(function() {
+        jQuery("#big_carousel").owlCarousel({
+            slideSpeed : 1500,
+            paginationSpeed : 600,
+            items : 5,
+            autoPlay: true,
+            stopOnHover: true,
+            addClassActive: true,
+            autoHeight: true,
+            responsive: true,
+            navigation: false,
+            navigationText: ["<i class='fa fa-chevron-left'></i>","<i class='fa fa-chevron-right'></i>"],
+            pagination : true,
+            paginationNumbers: false
+        });
+    });
+    /* ]]> */
+</script>
+<script type="text/javascript">
+    /* <![CDATA[ */
+    jQuery(document).ready(function() {
+        jQuery("#ticker").liScroll({travelocity: 0.07});
+    });
+    /* ]]> */
+</script>
+@parent
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('head_js'); ?>
+<?php echo $__env->yieldSection(); ?>
+</body>
+</html>
+<?php $__env->startSection('hacker_footer'); ?>
+<?php echo $__env->yieldSection(); ?>

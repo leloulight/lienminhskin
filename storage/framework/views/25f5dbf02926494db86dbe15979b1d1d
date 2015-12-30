@@ -1,0 +1,73 @@
+<?php $__env->startSection('author_header'); ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('title'); ?> Dashboard - Admin
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('meta'); ?>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta name="csrf-token" content="<?php echo e(csrf_token()); ?>"/>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('head_css'); ?>
+    <link href="<?php echo e(asset('bootstrap/css/bootstrap.min.css')); ?>" rel="stylesheet"
+          type="text/css"/>    <!-- Font Awesome Icons -->
+    <link href="<?php echo e(asset('lib/font-awesome/css/font-awesome.min.css')); ?>" rel="stylesheet"
+          type="text/css"/>    <!-- Ionicons -->
+    <link href="<?php echo e(asset('lib/ionicons/css/ionicons.min.css')); ?>" rel="stylesheet"
+          type="text/css"/>    <!-- Theme style -->
+    <link href="<?php echo e(asset('dist/css/AdminLTE.min.css')); ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('dist/css/skins/_all-skins.min.css')); ?>" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo e(asset('plugins/iCheck/all.css')); ?>" rel="stylesheet"
+          type="text/css"/>
+    <?php $__env->stopSection(); ?>
+    <?php $__env->startSection('head_js'); ?>    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
+    <script src="<?php echo e(asset('lib/html5shiv/3.7.2/html5shiv.js')); ?>"></script>
+    <script src="<?php echo e(asset('lib/respond.js/1.4.2/respond.min.js')); ?>"></script>    <![endif]-->
+    @parent
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('body_attr'); ?> class="skin-blue sidebar-mini"
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('body'); ?>
+    <div class="wrapper">
+        <?php echo $__env->make('widgets.main-header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+        <?php echo $__env->make('widgets.main-sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+        <div class="content-wrapper">
+
+            <section class="content-header">
+                <?php $__env->startSection('content-header'); ?>
+                <?php echo $__env->yieldSection(); ?>
+            </section>
+            <!-- Main content -->
+            <section class="content">
+                <?php $__env->startSection('content'); ?>
+                <?php echo $__env->yieldSection(); ?>
+            </section>
+        </div>
+        <?php echo $__env->make('widgets.main-footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php $__env->startSection('afterBody'); ?>
+        <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <?php echo $__env->make('widgets.control-sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    </aside><!-- /.control-sidebar -->
+    <div class="control-sidebar-bg"></div>
+    </div><!-- ./wrapper -->
+
+    <!-- jQuery 2.1.4 -->
+    <script src="<?php echo e(asset('plugins/jQuery/jQuery-2.1.4.min.js')); ?>"></script>
+    <!-- Bootstrap 3.3.5 -->
+    <script src="<?php echo e(asset('bootstrap/js/bootstrap.min.js')); ?>"></script>
+    <!-- AdminLTE App -->
+    <script src="<?php echo e(asset('dist/js/app.min.js')); ?>"></script>
+    <!-- Slimscroll -->
+    <script src="<?php echo e(asset('plugins/slimScroll/jquery.slimscroll.min.js')); ?>"></script>
+<?php $__env->startSection('extraPlugin'); ?>
+<?php echo $__env->yieldSection(); ?>
+
+<?php $__env->startSection('extraSection'); ?>
+<?php echo $__env->yieldSection(); ?>
+<?php $__env->stopSection(); ?>
+
+
+<?php $__env->startSection('hacker_footer'); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout._base', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

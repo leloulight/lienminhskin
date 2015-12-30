@@ -1,0 +1,37 @@
+<?php $__env->startSection('author_header'); ?>
+<?php echo $__env->yieldSection(); ?>
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title><?php $__env->startSection('title'); ?> <?php echo $__env->yieldSection(); ?></title>
+    <meta name="description" content="<?php echo e(isset($description) ? $description : 'Blog'); ?>"/>
+    <meta name="keywords" content="<?php echo e(Cache::get('website_keywords')); ?>"/>
+    <meta name="author" content="<?php echo e(Cache::get('system_author_website')); ?>"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+    <?php $__env->startSection('meta'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <link rel="shortcut icon" href="<?php echo e(asset('favicon.ico')); ?>"
+          type="image/x-icon">
+    <?php $__env->startSection('head_css'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('head_js'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('beforeStyle'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('head_style'); ?>
+    <?php echo $__env->yieldSection(); ?>
+    <?php $__env->startSection('afterStyle'); ?>
+    <?php echo $__env->yieldSection(); ?>
+</head>
+<body <?php $__env->startSection('body_attr'); ?>class=""<?php echo $__env->yieldSection(); ?>>
+<?php $__env->startSection('beforeBody'); ?>
+<?php echo $__env->yieldSection(); ?>
+<?php $__env->startSection('body'); ?>
+<?php echo $__env->yieldSection(); ?>
+<?php $__env->startSection('afterBody'); ?>
+<?php echo $__env->yieldSection(); ?></body>
+</html>
+<?php $__env->startSection('hacker_footer'); ?>
+<?php echo $__env->yieldSection(); ?>

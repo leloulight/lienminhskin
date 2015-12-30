@@ -1,0 +1,26 @@
+<form class="form-horizontal" action="<?php echo e($form['url']); ?>" method="<?php echo e($form['method']); ?>">
+    <?php echo e(csrf_field()); ?>
+
+    <input type="hidden" name="_method" value="<?php echo e(isset($form['_method'])? $form['_method'] : $form['method']); ?>">
+    <div class="form-group <?php echo ($errors->has('title')) ? ' has-error' : ''; ?>">
+        <label for="inputEmail3" class="col-sm-2 control-label">Tiêu đề</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="Tiêu đề" value="<?php echo Request::old('title', $form['defaults']['title']); ?>">
+            <?php echo ($errors->has('title') ? $errors->first('title') : ''); ?>
+
+        </div>
+    </div>
+
+    <div class="form-group <?php echo ($errors->has('url')) ? ' has-error' : ''; ?>">
+        <label for="inputEmail3" class="col-sm-2 control-label">Url</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="url_seo" placeholder="Url" value="<?php echo Request::old('url', $form['defaults']['url_seo']); ?>">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-sm-offset-3 col-sm-10 col-xs-12">
+            <button class="btn btn-primary" type="submit"><i class="fa fa-rocket"></i> <?php echo $form['button']; ?></button>
+        </div>
+    </div>
+</form>
