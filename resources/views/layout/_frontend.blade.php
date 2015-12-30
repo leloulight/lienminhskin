@@ -15,7 +15,6 @@
     <link href="{{ asset('css/icons.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/animate.css') }}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet" type="text/css"/>
-
     @section('beforeStyle')
     @show
     @section('head_style')
