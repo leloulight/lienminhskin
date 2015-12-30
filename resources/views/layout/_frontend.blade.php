@@ -31,7 +31,7 @@
 @show
 @section('head_js')
 <script type='text/javascript' src='http://d.theme20.com/sevenmag/wp-includes/js/jquery/jquery.js?ver=1.11.1'></script>
-<script type='text/javascript' src='http://d.theme20.com/sevenmag/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='{{ asset('js/migrate.js') }}'></script>
 <script src="{{ asset('js/seven.min.js') }}"></script>
 <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('js/jquery.li-scroller.1.0.js') }}"></script>
