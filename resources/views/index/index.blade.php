@@ -6,5 +6,6 @@ class="home page page-id-39 page-template page-template-page-home-slideshow page
 <div id="layout" class="boxed-margin ">
     @include('widgets.header')
     @include('widgets.slider')
+    @include('widgets.footer')
 </div>
 @stop
