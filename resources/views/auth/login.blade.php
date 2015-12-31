@@ -1,6 +1,12 @@
 <!-- resources/views/auth/login.blade.php -->
-
-<form method="POST" action="/auth/login">
+@if (count($errors) > 0)
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{!! $error !!}</li>
+        @endforeach
+    </ul>
+@endif
+<form method="POST" action="{{ url('/auth/login') }}">
     {!! csrf_field() !!}
 
     <div>
