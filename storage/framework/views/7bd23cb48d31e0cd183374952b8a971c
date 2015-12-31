@@ -25,7 +25,7 @@
 <?php $__env->startSection('afterBody'); ?>
 <?php echo $__env->yieldSection(); ?>
 <?php $__env->startSection('js'); ?>
-<script type='text/javascript' src='<?php echo e(asset('js/jquery-1.11.3.min.js')); ?>'></script>
+    <script type='text/javascript' src='<?php echo e(asset('js/jquery-1.11.3.min.js')); ?>'></script>
 <script type='text/javascript' src='<?php echo e(asset('js/migrate.js')); ?>'></script>
 <script type='text/javascript' src="<?php echo e(asset('js/seven.min.js')); ?>"></script>
 <script type='text/javascript' src="<?php echo e(asset('js/owl.carousel.min.js')); ?>"></script>
