@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use Auth;
 class IndexController extends Controller
 {
     /**
@@ -16,7 +16,10 @@ class IndexController extends Controller
      */
     public function index()
     {
-        //
+        echo '<pre>';
+        var_dump($user = Auth::user());
+        echo '</pre>';
+        die();
         return view('index.index');
     }
 
@@ -28,6 +31,7 @@ class IndexController extends Controller
     public function create()
     {
         //
+        return view('auth.register.blade.php');
     }
 
     /**
@@ -38,7 +42,10 @@ class IndexController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        echo '<pre>';
+        var_dump($request);
+        echo '</pre>';
+        die();
     }
 
     /**
