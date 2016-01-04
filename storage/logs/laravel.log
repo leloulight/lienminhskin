@@ -15018,3 +15018,6 @@ Stack trace:
 #19 C:\xampp\htdocs\skin\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(105): Illuminate\Foundation\Console\Kernel->bootstrap()
 #20 C:\xampp\htdocs\skin\artisan(71): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
 #21 {main}  
+[2016-01-04 17:03:15] production.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'Illuminate\Routing\ControllerServiceProvider' not found' in C:\xampp\htdocs\skin\vendor\laravel\framework\src\Illuminate\Foundation\ProviderRepository.php:146
+Stack trace:
+#0 {main}  
