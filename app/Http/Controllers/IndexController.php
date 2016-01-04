@@ -8,7 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
 
-use Intervention\Image\Image;
+use Intervention\Image\Facades\Image as Image;
 class IndexController extends Controller
 {
     /**
@@ -19,17 +19,18 @@ class IndexController extends Controller
     public function index()
     {
         // open an image file
-        $img = Image::make('public/test/1.jpg')->resize(300, 200);
+        $img_logo = Image::make('public/test/2.jpg');
+        $img_logo->resize(200, null, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        });
 
-        echo '<pre>';
-        var_dump($img);
-        echo '</pre>';
-        die();
-// open and resize an image file
+        $img = Image::make('public/test/bg.png');
+        $img->insert($img_logo,'center');
+        $img->colorize(-100, 0, 100);
+        $img->colorize(0, 30, 0);
+        return $img->response('jpg');
 
-
-// save file as png with medium quality
-        $img->save('public/bar.png', 60);
     }
 
     /**
