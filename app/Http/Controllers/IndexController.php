@@ -19,19 +19,17 @@ class IndexController extends Controller
     public function index()
     {
         // open an image file
-        $img = Image::make('/public/test/1.jpg');
+        $img = Image::make('public/test/1.jpg')->resize(300, 200);
+
         echo '<pre>';
         var_dump($img);
         echo '</pre>';
         die();
-// resize image instance
-        //$img->resize(320, 240);
+// open and resize an image file
 
-// insert a watermark
-        //$img->insert('public/watermark.png');
 
-// save image in desired format
-        //$img->save('public/bar.jpg');
+// save file as png with medium quality
+        $img->save('public/bar.png', 60);
     }
 
     /**

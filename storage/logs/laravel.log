@@ -14424,3 +14424,6 @@ Stack trace:
 [2016-01-04 06:52:05] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Intervention\Image\Image::make()' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
 Stack trace:
 #0 {main}  
+[2016-01-04 06:52:14] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Intervention\Image\Image::make()' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  
