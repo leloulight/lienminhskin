@@ -21,7 +21,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-       // echo Form::label('email', 'E-Mail Address');
+        echo Form::label('email', 'E-Mail Address');
     }
     public function excel()
     {
