@@ -16,11 +16,17 @@ class IndexController extends Controller
      */
     public function index()
     {
-        echo '<pre>';
-        var_dump($user = Auth::user());
-        echo '</pre>';
-        die();
-        return view('index.index');
+        // open an image file
+        $img = Image::make('public/test/1.jpg');
+
+// resize image instance
+        $img->resize(320, 240);
+
+// insert a watermark
+        //$img->insert('public/watermark.png');
+
+// save image in desired format
+        $img->save('public/bar.jpg');
     }
 
     /**
