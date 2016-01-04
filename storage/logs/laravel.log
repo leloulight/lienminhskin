@@ -14781,3 +14781,9 @@ Stack trace:
 #52 C:\xampp\htdocs\blog.thienduongwebsite\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(87): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #53 C:\xampp\htdocs\blog.thienduongwebsite\index.php(94): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #54 {main}  
+[2016-01-04 09:50:46] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Excel' not found' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  
+[2016-01-04 09:50:47] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Excel' not found' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  

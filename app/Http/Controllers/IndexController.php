@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 
 use Intervention\Image\Facades\Image as Image;
+use Maatwebsite\Excel\Facades\Excel as Excel;
 class IndexController extends Controller
 {
     /**
@@ -18,6 +19,19 @@ class IndexController extends Controller
      */
     public function index()
     {
+        Excel::create('Laravel Excel', function($excel) {
+            $excel->setTitle('Our new awesome title');
+            $excel->sheet('Excel sheet', function($sheet) {
+
+                $sheet->setOrientation('landscape');
+
+            });
+
+        })->export('xls');
+    }
+
+    public function image()
+    {
         // open an image file
         $img_logo = Image::make('public/test/2.jpg');
         $img_logo->resize(200, null, function ($constraint) {
@@ -26,8 +40,8 @@ class IndexController extends Controller
         });
 
         $img = Image::make('public/test/bg.png');
-        //$img->insert($img_logo,'center');
-        return $img_logo->response('jpg');
+        $img->insert($img_logo,'center');
+        return $img->response('jpg');
 
     }
 
