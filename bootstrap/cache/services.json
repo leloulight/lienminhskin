@@ -33,7 +33,8 @@
         "Maatwebsite\\Excel\\ExcelServiceProvider",
         "Jenssegers\\Agent\\AgentServiceProvider",
         "Cartalyst\\Sentry\\SentryServiceProvider",
-        "Laravel\\Socialite\\SocialiteServiceProvider"
+        "Laravel\\Socialite\\SocialiteServiceProvider",
+        "Collective\\Html\\HtmlServiceProvider"
     ],
     "eager": [
         "Illuminate\\Auth\\AuthServiceProvider",
@@ -144,7 +145,11 @@
         "translation.loader": "Illuminate\\Translation\\TranslationServiceProvider",
         "command.ide-helper.generate": "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider",
         "command.ide-helper.models": "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider",
-        "Laravel\\Socialite\\Contracts\\Factory": "Laravel\\Socialite\\SocialiteServiceProvider"
+        "Laravel\\Socialite\\Contracts\\Factory": "Laravel\\Socialite\\SocialiteServiceProvider",
+        "html": "Collective\\Html\\HtmlServiceProvider",
+        "form": "Collective\\Html\\HtmlServiceProvider",
+        "Collective\\Html\\HtmlBuilder": "Collective\\Html\\HtmlServiceProvider",
+        "Collective\\Html\\FormBuilder": "Collective\\Html\\HtmlServiceProvider"
     },
     "when": {
         "Illuminate\\Foundation\\Providers\\ArtisanServiceProvider": [],
@@ -160,6 +165,7 @@
         "Illuminate\\Auth\\Passwords\\PasswordResetServiceProvider": [],
         "Illuminate\\Translation\\TranslationServiceProvider": [],
         "Barryvdh\\LaravelIdeHelper\\IdeHelperServiceProvider": [],
-        "Laravel\\Socialite\\SocialiteServiceProvider": []
+        "Laravel\\Socialite\\SocialiteServiceProvider": [],
+        "Collective\\Html\\HtmlServiceProvider": []
     }
 }

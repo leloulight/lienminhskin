@@ -14850,3 +14850,6 @@ Stack trace:
 [2016-01-04 10:06:58] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'DOMPDF' not found' in C:\xampp\htdocs\blog.thienduongwebsite\vendor\phpoffice\phpexcel\Classes\PHPExcel\Writer\PDF\DomPDF.php:106
 Stack trace:
 #0 {main}  
+[2016-01-04 10:41:37] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Form' not found' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  

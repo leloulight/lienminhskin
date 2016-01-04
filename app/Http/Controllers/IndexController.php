@@ -10,6 +10,7 @@ use Auth;
 
 use Intervention\Image\Facades\Image as Image;
 use Maatwebsite\Excel\Facades\Excel as Excel;
+
 class IndexController extends Controller
 {
     /**
@@ -18,6 +19,10 @@ class IndexController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    {
+        Form::component('bsText', 'components.form.text', ['name', 'value', 'attributes']);
+    }
+    public function excel()
     {
         Excel::create('Laravel Excel', function($excel) {
             $excel->setTitle('Mot tap tin demo');
