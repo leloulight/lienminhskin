@@ -2,7 +2,7 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="0db9d334-1abd-437c-93d8-1c2efb6f7db3" name="blog" url="http://119.81.196.35">
+      <webServer id="0db9d334-1abd-437c-93d8-1c2efb6f7db3" name="blog (project level)" url="http://119.81.196.35">
         <fileTransfer host="119.81.196.35" port="21" rootFolder="/public_html/blog" password="df9adf9fdf9adf9fdf99df9adf92df98df9f" username="ilovecod">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
