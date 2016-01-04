@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
+
+use Intervention\Image\Image;
 class IndexController extends Controller
 {
     /**
@@ -18,15 +20,18 @@ class IndexController extends Controller
     {
         // open an image file
         $img = Image::make('public/test/1.jpg');
-
+        echo '<pre>';
+        var_dump($img);
+        echo '</pre>';
+        die();
 // resize image instance
-        $img->resize(320, 240);
+        //$img->resize(320, 240);
 
 // insert a watermark
         //$img->insert('public/watermark.png');
 
 // save image in desired format
-        $img->save('public/bar.jpg');
+        //$img->save('public/bar.jpg');
     }
 
     /**

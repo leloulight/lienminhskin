@@ -14406,3 +14406,18 @@ Stack trace:
 #54 C:\xampp\htdocs\blog.thienduongwebsite\vendor\laravel\framework\src\Illuminate\Foundation\Http\Kernel.php(87): Illuminate\Foundation\Http\Kernel->sendRequestThroughRouter(Object(Illuminate\Http\Request))
 #55 C:\xampp\htdocs\blog.thienduongwebsite\index.php(94): Illuminate\Foundation\Http\Kernel->handle(Object(Illuminate\Http\Request))
 #56 {main}  
+[2016-01-04 06:49:00] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Image' not found' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:20
+Stack trace:
+#0 {main}  
+[2016-01-04 06:50:17] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Intervention\Image\Image::make()' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  
+[2016-01-04 06:50:18] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Intervention\Image\Image::make()' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  
+[2016-01-04 06:50:19] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Call to undefined method Intervention\Image\Image::make()' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  
+[2016-01-04 06:50:28] local.ERROR: exception 'Symfony\Component\Debug\Exception\FatalErrorException' with message 'Class 'App\Http\Controllers\Image' not found' in C:\xampp\htdocs\blog.thienduongwebsite\app\Http\Controllers\IndexController.php:22
+Stack trace:
+#0 {main}  
