@@ -15,7 +15,9 @@
         "jenssegers/agent": "^2.3",
         "cartalyst/sentry": "dev-feature/laravel-5",
         "illuminate/html": "~5.0",
-        "laravel/socialite": "^2.0"
+        "laravel/socialite": "^2.0",
+        "dompdf/dompdf": "~0.6.1",
+        "mpdf/mpdf": "~5.7.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

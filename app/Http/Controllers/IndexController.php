@@ -20,11 +20,74 @@ class IndexController extends Controller
     public function index()
     {
         Excel::create('Laravel Excel', function($excel) {
-            $excel->setTitle('Our new awesome title');
-            $excel->sheet('Excel sheet', function($sheet) {
+            $excel->setTitle('Mot tap tin demo');
+            // Chain the setters
+            $excel->setCreator('LoiTran')
+                ->setCompany('SW');
+
+            // Call them separately
+            $excel->setDescription('A document demo');
+            $data = array(
+                array('data1', 'data2'),
+                array('data3', 'data4')
+            );
+            $excel->sheet('Excel sheet', function($sheet) use($data) {
 
                 $sheet->setOrientation('landscape');
+                $sheet->protect('password');
+                $sheet->protect('password', function(\PHPExcel_Worksheet_Protection $protection) {
+                    $protection->setSort(true);
+                });
+                $sheet->fromArray($data, null, 'A1', false, true);
+                // Manipulate first row
+                $sheet->row(1, array(
+                    'test1', 'test2'
+                ));
 
+// Manipulate 2nd row
+                $sheet->row(2, array(
+                    'test3', 'test4'
+                ));
+
+                // Append row after row 2
+                $sheet->appendRow(5, array(
+                    'appended', 'appended'
+                ));
+
+// Append row as very last
+                $sheet->appendRow(array(
+                    'appended', 'appended'
+                ));
+
+                // Add before first row
+                $sheet->prependRow(10, array(
+                    'prepended', 'prepended'
+                ));
+
+// Add as very first
+                $sheet->prependRow(array(
+                    'prepended', 'prepended'
+                ));
+
+                // Append multiple rows
+                $sheet->rows(array(
+                    array('test1', 'test2'),
+                    array('test3', 'test4')
+                ));
+
+// Append multiple rows
+                $sheet->rows(array(
+                    array('test5', 'test6'),
+                    array('test7', 'test8')
+                ));
+                $sheet->setMergeColumn(array(
+                    'columns' => array('A','B','C','D'),
+                    'rows' => array(
+                        array(2,3),
+                        array(5,11),
+                    )
+                ));
+                $sheet->protectCells('A1', '123');
             });
 
         })->export('xls');
