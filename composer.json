@@ -18,13 +18,15 @@
         "laravel/socialite": "^2.0",
         "dompdf/dompdf": "~0.6.1",
         "mpdf/mpdf": "~5.7.3"
+
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~4.0",
-        "phpspec/phpspec": "~2.1",
-        "laravelcollective/html": "~5.0"
+        "phpspec/phpspec": "~2.1"
+
+
     },
     "autoload": {
         "classmap": [

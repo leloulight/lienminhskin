@@ -10,6 +10,7 @@ use Auth;
 
 use Intervention\Image\Facades\Image as Image;
 use Maatwebsite\Excel\Facades\Excel as Excel;
+//
 
 class IndexController extends Controller
 {
@@ -20,7 +21,7 @@ class IndexController extends Controller
      */
     public function index()
     {
-        Form::component('bsText', 'components.form.text', ['name', 'value', 'attributes']);
+       // echo Form::label('email', 'E-Mail Address');
     }
     public function excel()
     {
