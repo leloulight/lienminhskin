@@ -26,9 +26,7 @@ class IndexController extends Controller
         });
 
         $img = Image::make('public/test/bg.png');
-        $img->insert($img_logo,'center');
-        $img->colorize(-100, 0, 100);
-        $img->colorize(0, 30, 0);
+        //$img->insert($img_logo,'center');
         return $img->response('jpg');
 
     }
