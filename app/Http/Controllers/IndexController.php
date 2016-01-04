@@ -19,7 +19,7 @@ class IndexController extends Controller
     public function index()
     {
         // open an image file
-        $img = Image::make('public/test/1.jpg');
+        $img = Image::make('/public/test/1.jpg');
         echo '<pre>';
         var_dump($img);
         echo '</pre>';
