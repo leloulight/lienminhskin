@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Auth;
+
+use Intervention\Image\Facades\Image as Image;
+use Maatwebsite\Excel\Facades\Excel as Excel;
+
 class IndexController extends Controller
 {
     /**
@@ -16,11 +20,97 @@ class IndexController extends Controller
      */
     public function index()
     {
-        echo '<pre>';
-        var_dump($user = Auth::user());
-        echo '</pre>';
-        die();
-        return view('index.index');
+        Form::component('bsText', 'components.form.text', ['name', 'value', 'attributes']);
+    }
+    public function excel()
+    {
+        Excel::create('Laravel Excel', function($excel) {
+            $excel->setTitle('Mot tap tin demo');
+            // Chain the setters
+            $excel->setCreator('LoiTran')
+                ->setCompany('SW');
+
+            // Call them separately
+            $excel->setDescription('A document demo');
+            $data = array(
+                array('data1', 'data2'),
+                array('data3', 'data4')
+            );
+            $excel->sheet('Excel sheet', function($sheet) use($data) {
+
+                $sheet->setOrientation('landscape');
+                $sheet->protect('password');
+                $sheet->protect('password', function(\PHPExcel_Worksheet_Protection $protection) {
+                    $protection->setSort(true);
+                });
+                $sheet->fromArray($data, null, 'A1', false, true);
+                // Manipulate first row
+                $sheet->row(1, array(
+                    'test1', 'test2'
+                ));
+
+// Manipulate 2nd row
+                $sheet->row(2, array(
+                    'test3', 'test4'
+                ));
+
+                // Append row after row 2
+                $sheet->appendRow(5, array(
+                    'appended', 'appended'
+                ));
+
+// Append row as very last
+                $sheet->appendRow(array(
+                    'appended', 'appended'
+                ));
+
+                // Add before first row
+                $sheet->prependRow(10, array(
+                    'prepended', 'prepended'
+                ));
+
+// Add as very first
+                $sheet->prependRow(array(
+                    'prepended', 'prepended'
+                ));
+
+                // Append multiple rows
+                $sheet->rows(array(
+                    array('test1', 'test2'),
+                    array('test3', 'test4')
+                ));
+
+// Append multiple rows
+                $sheet->rows(array(
+                    array('test5', 'test6'),
+                    array('test7', 'test8')
+                ));
+                $sheet->setMergeColumn(array(
+                    'columns' => array('A','B','C','D'),
+                    'rows' => array(
+                        array(2,3),
+                        array(5,11),
+                    )
+                ));
+                $sheet->protectCells('A1', '123');
+            });
+
+        })->export('xls');
+    }
+
+    public function image()
+    {
+        // open an image file
+        $img_logo = Image::make('public/test/2.jpg');
+        $img_logo->resize(200, null, function ($constraint) {
+            $constraint->aspectRatio();
+            $constraint->upsize();
+        });
+
+        $img = Image::make('public/test/bg.png');
+        $img->insert($img_logo,'center');
+        return $img->response('jpg');
+
     }
 
     /**
