@@ -11,6 +11,9 @@ use Auth;
 use Intervention\Image\Facades\Image as Image;
 use Maatwebsite\Excel\Facades\Excel as Excel;
 //
+use Collective\Html\FormFacade as Form;
+use Cartalyst\Sentry\Facades\Laravel\Sentry;
+
 
 class IndexController extends Controller
 {
@@ -21,7 +24,25 @@ class IndexController extends Controller
      */
     public function index()
     {
-        echo Form::label('email', 'E-Mail Address');
+        try
+        {
+            // Create the group
+            $group = Sentry::createGroup(array(
+                'name'        => 'Moderator',
+                'permissions' => array(
+                    'admin' => 1,
+                    'users' => 1,
+                ),
+            ));
+        }
+        catch (Cartalyst\Sentry\Groups\NameRequiredException $e)
+        {
+            echo 'Name field is required';
+        }
+        catch (Cartalyst\Sentry\Groups\GroupExistsException $e)
+        {
+            echo 'Group already exists';
+        }
     }
     public function excel()
     {
