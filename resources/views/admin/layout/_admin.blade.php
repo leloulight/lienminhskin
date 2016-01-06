@@ -28,8 +28,8 @@
 @stop
 @section('body')
     <div class="wrapper">
-        @include('widgets.main-header')
-        @include('widgets.main-sidebar')
+        @include('admin.widgets.main-header')
+        @include('admin.widgets.main-sidebar')
 
         <div class="content-wrapper">
 
@@ -43,12 +43,12 @@
                 @show
             </section>
         </div>
-        @include('widgets.main-footer')
+        @include('admin.widgets.main-footer')
 @stop
 @section('afterBody')
         <!-- Control Sidebar -->
     <aside class="control-sidebar control-sidebar-dark">
-        @include('widgets.control-sidebar')
+        @include('admin.widgets.control-sidebar')
     </aside><!-- /.control-sidebar -->
     <div class="control-sidebar-bg"></div>
     </div><!-- ./wrapper -->
