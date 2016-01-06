@@ -1,4 +1,4 @@
-@extends('layout._base')
+@extends('admin.layout._base')
 @section('author_header')
 @stop
 @section('title') Dashboard - Admin
