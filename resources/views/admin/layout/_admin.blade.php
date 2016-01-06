@@ -8,20 +8,20 @@
     <meta name="csrf-token" content="{{ csrf_token() }}"/>
 @stop
 @section('head_css')
-    <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"
+    <link href="{{ asset('admin/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet"
           type="text/css"/>    <!-- Font Awesome Icons -->
-    <link href="{{ asset('lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet"
+    <link href="{{ asset('admin/lib/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet"
           type="text/css"/>    <!-- Ionicons -->
-    <link href="{{ asset('lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet"
+    <link href="{{ asset('admin/lib/ionicons/css/ionicons.min.css') }}" rel="stylesheet"
           type="text/css"/>    <!-- Theme style -->
-    <link href="{{ asset('dist/css/AdminLTE.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css"/>
-    <link href="{{ asset('plugins/iCheck/all.css') }}" rel="stylesheet"
+    <link href="{{ asset('admin/dist/css/AdminLTE.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('admin/dist/css/skins/_all-skins.min.css') }}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('admin/plugins/iCheck/all.css') }}" rel="stylesheet"
           type="text/css"/>
     @stop
     @section('head_js')    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->    <!--[if lt IE 9]>
-    <script src="{{ asset('lib/html5shiv/3.7.2/html5shiv.js') }}"></script>
-    <script src="{{ asset('lib/respond.js/1.4.2/respond.min.js') }}"></script>    <![endif]-->
+    <script src="{{ asset('admin/lib/html5shiv/3.7.2/html5shiv.js') }}"></script>
+    <script src="{{ asset('admin/lib/respond.js/1.4.2/respond.min.js') }}"></script>    <![endif]-->
     @parent
 @stop
 @section('body_attr') class="skin-blue sidebar-mini"
@@ -54,13 +54,13 @@
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
-    <script src="{{ asset('plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
+    <script src="{{ asset('admin/plugins/jQuery/jQuery-2.1.4.min.js') }}"></script>
     <!-- Bootstrap 3.3.5 -->
-    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('admin/bootstrap/js/bootstrap.min.js') }}"></script>
     <!-- AdminLTE App -->
-    <script src="{{ asset('dist/js/app.min.js') }}"></script>
+    <script src="{{ asset('admin/dist/js/app.min.js') }}"></script>
     <!-- Slimscroll -->
-    <script src="{{ asset('plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
+    <script src="{{ asset('admin/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
 @section('extraPlugin')
 @show
 
